@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955"
+			   minHeight="600">
+	<s:layout>
+		<s:VerticalLayout gap="10"
+						  horizontalAlign="center"
+						  paddingTop="20"/>
+	</s:layout>
+
+	<fx:Script>
+		<![CDATA[
+			import flash.net.navigateToURL;
+
+
+
+			protected function linkbutton1_clickHandler(event:MouseEvent):void
+			{
+				navigateToURL(new URLRequest("http://flameantics.blogspot.com/2012/01/interface-design-considerations.html"));
+
+
+			}
+		]]>
+	</fx:Script>
+
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:VGroup>
+		<s:TextArea width="259"
+					height="25"
+					borderVisible="false"
+					fontWeight="bold"
+					text="Interface Design Considerations"
+					textAlign="left"/>
+		<s:TextArea x="218"
+					y="44"
+					width="547"
+					height="67"
+					borderVisible="false"
+					text="The interface design is discussed more fully on the FlameAntics blog link below. The interface files are in the package directory ie.flame.comp, and as yet have not been added to the main development trunk. At present they are at a research level of development. But work has begun on designing the first set of classes."/>
+		<s:SWFLoader x="215"
+					 y="158"
+					 source="../assets/interface.swf"/>
+		<mx:LinkButton x="421"
+					   y="129"
+					   label="FlameAntics Blog"
+					   click="linkbutton1_clickHandler(event)"
+					   color="#9B4494"
+					   textAlign="left"/>
+	</s:VGroup>
+</s:Application>
